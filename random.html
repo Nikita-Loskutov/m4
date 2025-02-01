@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    img{
+        position: absolute;
+        transition: 0.5s;
+    }
+    body{
+        background-color: gray;
+    }
+</style>
+<body>
+    <h1 id="score">Score: 0</h1>
+    <img id="img" src="coin.png">
+</body>
+<script>
+    let img = document.getElementById('img');
+    let scoree = document.getElementById('score');
+    let score = 0;
+    function move() {
+        let ranx = Math.floor(Math.random() * (50 + 250)) + 50;
+        let rany = Math.floor(Math.random() * (50 + 250)) + 50;
+        img.style.left = ranx + 'px'
+        img.style.top = rany + 'px'
+    }
+    img.addEventListener('click', function() {
+        score += 1;
+        scoree.innerText = "Score: " + score;
+    });
+    setInterval(move,1000)
+</script>
+</html>
