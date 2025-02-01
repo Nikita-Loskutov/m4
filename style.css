@@ -38,6 +38,6 @@ nav {
     
 }
 
-.close {
+#main, #result {
     display: none;
 }
