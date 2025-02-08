@@ -29,6 +29,7 @@ button {
 
 button:hover{
     background-color: #020d70;
+    cursor: pointer;
 }
 
 nav {
